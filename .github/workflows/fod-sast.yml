@@ -1,4 +1,4 @@
-name: My VS Solution Workflow
+name: Fortify Scan
 
 on:
   workflow_dispatch:
