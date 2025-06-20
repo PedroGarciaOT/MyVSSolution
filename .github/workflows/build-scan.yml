@@ -4,11 +4,12 @@
 name: .NET
 
 on:
+    woworkflow_dispatch:
 #  push:
 #    branches: [ "main" ]
 #  pull_request:
 #    branches: [ "main" ]
-#  woworkflow_dispatch:
+    
     
 jobs:
   build:
