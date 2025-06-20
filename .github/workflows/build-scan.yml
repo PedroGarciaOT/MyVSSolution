@@ -1,0 +1,64 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: .NET
+
+on:
+#  push:
+#    branches: [ "main" ]
+#  pull_request:
+#    branches: [ "main" ]
+#  woworkflow_dispatch:
+    
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Checkout Shared Project
+      uses: actions/checkout@v4
+      with:
+        repository: PedroGarciaOT/MyVSSharedProject
+        path: ../MyVSCommon/MyVSSharedProject
+      
+    
+    - name: setup-msbuild
+      uses: microsoft/setup-msbuild@v2
+      with:
+        # Folder location of where vswhere.exe is located if a self-hosted agent
+        vswhere-path: # optional
+        # Version of Visual Studio to search; defaults to latest if not specified
+        vs-version: # optional
+        # Enable searching for pre-release versions of Visual Studio/MSBuild
+        vs-prerelease: # optional
+        # The preferred processor architecture of MSBuild. Can be either "x86", "x64", or "arm64". "x64" is only available from Visual Studio version 17.0 and later.
+        msbuild-architecture: # optional, default is x86
+              
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+
+#    - name: Restore dependencies
+#      run: dotnet restore
+
+#    - name: Build
+#      run: dotnet build --no-restore
+
+    - name: Build
+      run: msbuild MyVSSolution.sln /t:clean /t:rebuild
+      
+ #   - name: Test
+ #     run: dotnet test --no-build --verbosity normal
+
+#    - name: Fortify AST Scan
+#      # You may pin to the exact commit or the version.
+#      # uses: fortify/github-action@ff40cc3fc263fa6edc64b77fa2486e79a6e32d1b
+#      uses: fortify/github-action@v1
+#      with:
+#        # Run a SAST scan, takes either true or false (default)
+#        sast-scan: # optional, default is false
+          
