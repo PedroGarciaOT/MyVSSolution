@@ -10,7 +10,6 @@ on:
 #  pull_request:
 #    branches: [ "main" ]
     
-    
 jobs:
   build-scan:
     environment: FortifyEnvironment
@@ -30,7 +29,6 @@ jobs:
         repository: PedroGarciaOT/MyVSSharedProject
         # path: ../MyVSCommon/MyVSSharedProject
       
-    
     - name: setup-msbuild
       uses: microsoft/setup-msbuild@v2
       with:
@@ -55,7 +53,7 @@ jobs:
 #      run: dotnet build --no-restore
 
     - name: Build
-      run: msbuild MyVSSolution.sln /t:clean /t:rebuild
+      run: msbuild /t:clean /t:rebuild
       
  #   - name: Test
  #     run: dotnet test --no-build --verbosity normal
