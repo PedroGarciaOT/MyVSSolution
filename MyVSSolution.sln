@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.35728.64
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyVSProject01", "MyVSProject01\MyVSProject01.csproj", "{62BF3896-8C90-4FBC-AE3B-5B1EDA122861}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyVSProject01", "MyVSProject01\MyVSProject01.csproj", "{62BF3896-8C90-4FBC-AE3B-5B1EDA122861}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyVSSharedProject", "..\MyVSCommon\MyVSSharedProject\MyVSSharedProject.csproj", "{4A4C668D-5CD7-4518-8FCE-8629EEAD1DA1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyVSSharedProject", "..\MyVSSharedProject\MyVSSharedProject.csproj", "{4A4C668D-5CD7-4518-8FCE-8629EEAD1DA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyVSProject02", "MyVSProject02\MyVSProject02.csproj", "{A2E5C89B-DA1E-4714-8346-D5688874D880}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyVSProject02", "MyVSProject02\MyVSProject02.csproj", "{A2E5C89B-DA1E-4714-8346-D5688874D880}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
