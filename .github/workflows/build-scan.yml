@@ -28,7 +28,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: PedroGarciaOT/MyVSSharedProject
-        path: ../MyVSCommon/MyVSSharedProject
+        path: MyVSCommon/MyVSSharedProject
       
     
     - name: setup-msbuild
