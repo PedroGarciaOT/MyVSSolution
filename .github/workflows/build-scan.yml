@@ -58,7 +58,7 @@ jobs:
 
     # MSBuild Build
     - name: Build 
-      run: msbuild MyVSSolution/MyVSSolution.sln /t:clean /t:restore /t:rebuild
+      run: msbuild MyVSSolution/MyVSSolution.sln -t:clean -t:restore -t:rebuild
       
  #   - name: Test
  #     run: dotnet test --no-build --verbosity normal
