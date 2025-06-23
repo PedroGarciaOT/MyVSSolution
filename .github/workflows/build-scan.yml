@@ -1,7 +1,7 @@
 # This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 
-name: Build and Scan My VS Solution Workflow
+name: Build and Scan
 
 on:
   workflow_dispatch:
@@ -34,15 +34,15 @@ jobs:
       
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v2
-      with:
+      # with:
         # Folder location of where vswhere.exe is located if a self-hosted agent
-        vswhere-path: # optional
+        # vswhere-path: # optional
         # Version of Visual Studio to search; defaults to latest if not specified
-        vs-version: # optional
+        # vs-version: # optional
         # Enable searching for pre-release versions of Visual Studio/MSBuild
-        vs-prerelease: # optional
+        # vs-prerelease: # optional
         # The preferred processor architecture of MSBuild. Can be either "x86", "x64", or "arm64". "x64" is only available from Visual Studio version 17.0 and later.
-        msbuild-architecture: # optional, default is x86
+        # msbuild-architecture: # optional, default is x86
               
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
