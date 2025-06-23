@@ -84,9 +84,10 @@ jobs:
           DO_JOB_SUMMARY: true
           DO_PR_COMMENT: true
 
-    - name: Output ScanCentral Log
-      if: failure()
-        run: | 
-          echo "=== Begin scancentral.log ==="
-          type "C:\Users\runneradmin\AppData\Local\Fortify\scancentral-24.4.1\log\scancentral.log" || echo "Log file not found."
-          echo "=== End scancentral.log ==="
+#    - name:vOutput ScanCentral Log
+#      if: failure()
+#        run: | 
+#          echo "=== Begin scancentral.log ==="
+#          type "C:\Users\runneradmin\AppData\Local\Fortify\scancentral-24.4.1\log\scancentral.log" || echo "Log file not found."
+#          echo "=== End scancentral.log ==="
+#
