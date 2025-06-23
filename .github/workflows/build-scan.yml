@@ -86,8 +86,7 @@ jobs:
 
     - name: Output ScanCentral Log
       if: failure()
-        run: |
+        run: | 
           echo "=== Begin scancentral.log ==="
-          set SC_CLIENT_VERSION=
           type "C:\Users\runneradmin\AppData\Local\Fortify\scancentral-24.4.1\log\scancentral.log" || echo "Log file not found."
           echo "=== End scancentral.log ==="
