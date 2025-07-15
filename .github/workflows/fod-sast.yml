@@ -1,4 +1,4 @@
-name: Fortify Scan
+name: Fortify AST Scan
 
 on:
   workflow_dispatch:
