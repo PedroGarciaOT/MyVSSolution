@@ -35,7 +35,7 @@ jobs:
 
     # Fortify AST Scan
     - name: Scan 
-      uses: fortify/github-action@v1
+      uses: fortify/github-action@v2
       with:
         sast-scan: true
         debricked-sca-scan: true
